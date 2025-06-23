@@ -1,0 +1,43 @@
+nmap or network mapper is a open source tool that is used to scan the ip addresses and port
+
+The command I am going to use is
+$ nmap -sS ip-addresses
+
+This command gives me the output of the all the available system ports that are available in my system 
+To run this command I need to provide the system administration privilges
+
+I use the win 11 operating system so I needed to manually install the nmap and npcap
+
+npcap is the open source tool that is used to the packet sniffing in the windows operating system
+
+Pakcket sniffing is the process of inspecting the data packets as they travel across the computer network
+
+when I run the above command I got the output in this manner
+
+RESULTS:
+
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-06-23 12:35 +0530
+Nmap scan report for xxx.xxx.xxx.xxx
+Host is up (0.00007s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+137/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+xxxx/tcp open  icslap
+
+Nmap done: 1 IP address (1 host up) scanned in 1.05 seconds
+
+The common services that are running on the ports are
+
+msrpc is Microsoft Remote Procedure call that will be running on the port 135/tcp and 135/udp
+It allows the client applications to communicate with server-side like the DCOM,Exchange server
+
+netbios-ssn or NetBIOS Session Service it is used for the printer sharing on the windows over the TCP/IP protocol
+it is operates on the port 137
+
+Microsoft-DS it is used to file sharing,printer access,remote admin login and etc it works on the port 445/tcp 
+
+The ports are very sensitive to the attacks so we need to block them from the internet using the firewall
+
+So using the nmap -sS ip-adress-of-local-system we can scan this ports 
