@@ -1,0 +1,47 @@
+In this I have taken the Gmail Login Attempt Blocked email from the caniphish.com
+
+The email headers are from 
+google-support@webnotifications.net
+
+The senders email address looks like a genuiune google mail
+
+
+The header I analysed it using the caniphish 
+Delivered-To: victim@example.com
+Received: by mail.example.com with SMTP id abc123456789; Wed, 25 Jun 2025 08:53:00 +0530 (IST)
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com [209.85.218.41]) by mx.example.com with ESMTP id xyz987654321; Wed, 25 Jun 2025 08:52:55 +0530 (IST)
+Received: from suspicious-domain.com (suspicious-domain.com [192.0.2.1]) by mail-sor-f41.google.com with ESMTP id def456789123; Wed, 25 Jun 2025 08:52:50 +0530 (IST)
+From: Google Security <no-reply@google.com>
+Reply-To: phishing@malicious-site.com
+To: victim@example.com
+Subject: Urgent: Gmail Account Login Blocked
+Date: Wed, 25 Jun 2025 08:52:45 +0530
+Message-ID: <abc123@malicious-site.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+X-Mailer: Microsoft Outlook Express 6.00.2900.2180
+Authentication-Results: mx.example.com; spf=softfail (sender IP is 192.0.2.1) smtp.mailfrom=suspicious-domain.com; dkim=none; dmarc=fail
+
+The hops for the suspicious-domain.com is set to automatic
+The hops for the mx.example.com is getting the delays of 5 seconds
+
+
+The suspicious links that are in the gmail is the links that gives the button
+which will redirect to the an duplicate gmail and password sign in page
+
+It says that to urgently login back to stop the suspension of your google account 
+This above statement is the urgent language
+
+I could note that the check activity button redirects to the custom made
+gmail login page not the authentic one
+
+I could not find any grammatical errors in them
+
+
+The summary of the email
+    The email creates a sense of urgence in the user to stop their google accounts from stoping them from being get
+    suspended so they create the urgence by providing the check activity button link which will redirect them back
+    to the custom gmail login page where the user if enters the email and password it will post the email and password
+    to the scammer
+
+This is the end of Day2 :)
